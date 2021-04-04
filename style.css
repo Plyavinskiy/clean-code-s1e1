@@ -34,19 +34,19 @@
   margin: 0 auto 0;
 }
 
-.new-task__wrapper {
+.task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.new-item {
   display: flex;
 }
 
 .task-list {
   margin: 0;
-  padding: 0px;
-}
-
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
+  padding: 0;
 }
 
 .to-do__title,
@@ -56,12 +56,13 @@
 }
 
 .new-task__input,
+.task-list__checkbox,
 .task-list__input,
-.btn {
+.button {
   outline: none;
 }
 
-.btn {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -71,7 +72,7 @@
   cursor: pointer;
 }
 
-.btn:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
@@ -102,8 +103,8 @@
   color: #888;
 }
 
-.new-task__input,
-.task-list__input {
+.new-task__input:focus,
+.task-list__input:focus {
   color: #333;
 }
 
@@ -117,7 +118,7 @@
   width: 318px;
 }
 
-.btn-add:hover {
+.button-add:hover {
   color: #0fc57c;
 }
 
@@ -150,17 +151,17 @@
   width: 226px;
 }
 
-.btn-delete:hover {
+.button-delete:hover {
   color: #cf2323;
 }
 
-.btn__image {
+.button-delete__image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn__image:hover {
+.button-delete__image:hover {
   transform: rotateZ(0);
 }
 
